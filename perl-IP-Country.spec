@@ -16,7 +16,6 @@ Buildrequires:	perl-devel
 %endif
 BuildRequires:	perl(Geography::Countries)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 IP lookup modules for Perl. This package also provides the ip2cc utility, to
