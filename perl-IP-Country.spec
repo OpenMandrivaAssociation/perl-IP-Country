@@ -1,7 +1,7 @@
 %define module	IP-Country
 %define name	perl-%{module}
-%define version	2.24
-%define	release	%mkrel 2
+%define version	2.25
+%define	release	%mkrel 1
 
 Name:		%{name}
 Version:	%{version}
