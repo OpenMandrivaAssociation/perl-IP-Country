@@ -1,29 +1,29 @@
-%define module	IP-Country
-%define name	perl-%{module}
-%define version	2.26
-%define	release	%mkrel 1
+%define upstream_name	 IP-Country
+%define upstream_version 2.27
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
+
 Summary:	Fast lookup of country codes from IP addresses
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/IP/%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    ftp://ftp.perl.org/pub/CPAN/modules/by-module/IP/%{upstream_name}-%{upstream_version}.tar.gz
+
 %if %{mdkversion} < 1010
 Buildrequires:	perl-devel
 %endif
 BuildRequires:	perl(Geography::Countries)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 IP lookup modules for Perl. This package also provides the ip2cc utility, to
 lookup country from IP address or hostname.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
