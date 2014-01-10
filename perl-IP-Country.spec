@@ -1,14 +1,14 @@
 %define modname	IP-Country
-%define modver	2.27
+%define modver 2.28
 
 Summary:	Fast lookup of country codes from IP addresses
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	10
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/IP/%{modname}-%{modver}.tar.gz
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/IP/IP-Country-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRequires:	perl(Geography::Countries)
@@ -36,4 +36,5 @@ make test
 %{perl_vendorlib}/IP
 %{_mandir}/man1/*
 %{_mandir}/man3/*
+
 
