@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/IP/IP-Country-%{modver}.tar.gz
 BuildArch:	noarch
+BuildRequires:	perl(Test)
 BuildRequires:	perl-devel
 BuildRequires:	perl(Geography::Countries)
 
