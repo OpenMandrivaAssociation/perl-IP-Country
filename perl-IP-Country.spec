@@ -3,12 +3,12 @@
 
 Summary:	Fast lookup of country codes from IP addresses
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	9
+Version:	%{modver}
+Release:	10
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/IP/IP-Country-%{modver}.tar.gz
+Url:		https://metacpan.org/dist/IP-Country
+Source0:	https://cpan.metacpan.org/authors/id/N/NW/NWETTERS/IP-Country-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl(Test)
